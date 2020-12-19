@@ -51,6 +51,8 @@
             }
         }
 
+
+        //Purpose is that we don't end up having 2 same usernames 
         public function getUserbyUsername($username){
             try{
                 $sql = "select count(*) as num from users where username = :username";

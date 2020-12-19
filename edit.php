@@ -39,19 +39,19 @@
             <input type="text" class="form-control" value="<?php echo $attendee['dateofbirth'] ?>" id="dob" name="dob">
         </div>
         <div class="form-group">
-            <label for="specialty">Area of Expertise</label>
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" value="<?php echo $attendee['emailaddress'] ?>" name="email" aria-describedby="emailHelp" >
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="specialty">Domain of Expertise</label>
             <select class="form-control" id="specialty" name="specialty">
                 <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
-                   <option value="<?php echo $r['specialty_id'] ?>" <?php if($r['specialty_id'] == $attendee['specialty_id']) echo 'selected' ?>>
+                   <option value="<?php echo $r['speciality_id'] ?>" <?php if($r['speciality_id'] == $attendee['speciality_id']) echo 'selected' ?>>
                         <?php echo $r['name']; ?>
                    </option>
                 <?php }?>
             </select>
-        </div>
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" value="<?php echo $attendee['emailaddress'] ?>" name="email" aria-describedby="emailHelp" >
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="phone">Contact Number</label>
