@@ -1,9 +1,16 @@
 <?php 
     // Development Connection
-     $host = '127.0.0.1';
-     $db = 'registration';
-     $user = 'root';
-     $pass = '';
+     //$host = '127.0.0.1';
+     //$db = 'registration';
+     //$user = 'root';
+     //$pass = '';
+     //$charset = 'utf8mb4';
+
+     // Remote Database Connection
+     $host = 'remotemysql.com';
+     $db = 'LBMXew99E4';
+     $user = 'LBMXew99E4';
+     $pass = 'cGSbmPMN3V';
      $charset = 'utf8mb4';
 
     //Remote Database Connection
